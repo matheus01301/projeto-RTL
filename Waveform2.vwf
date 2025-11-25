@@ -152,16 +152,6 @@ SIGNAL("state_debug[0]")
 	PARENT = "state_debug";
 }
 
-SIGNAL("stop")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
 TRANSITION_LIST("bot")
 {
 	NODE
@@ -292,17 +282,6 @@ TRANSITION_LIST("state_debug[0]")
 	}
 }
 
-TRANSITION_LIST("stop")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1240.0;
-		LEVEL 1 FOR 120.0;
-		LEVEL 0 FOR 640.0;
-	}
-}
-
 DISPLAY_LINE
 {
 	CHANNEL = "bot";
@@ -323,7 +302,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "stop";
+	CHANNEL = "end_close";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
@@ -332,7 +311,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "end_close";
+	CHANNEL = "end_open";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;
@@ -341,7 +320,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "end_open";
+	CHANNEL = "motor_close";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 4;
@@ -350,7 +329,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "motor_close";
+	CHANNEL = "motor_open";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 5;
@@ -359,7 +338,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "motor_open";
+	CHANNEL = "rst_n";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 6;
@@ -368,7 +347,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "rst_n";
+	CHANNEL = "obst";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 7;
@@ -377,21 +356,12 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "obst";
+	CHANNEL = "state_debug";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 8;
 	TREE_LEVEL = 0;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "state_debug";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 9;
-	TREE_LEVEL = 0;
-	CHILDREN = 10, 11, 12;
+	CHILDREN = 9, 10, 11;
 }
 
 DISPLAY_LINE
@@ -399,9 +369,9 @@ DISPLAY_LINE
 	CHANNEL = "state_debug[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 10;
+	TREE_INDEX = 9;
 	TREE_LEVEL = 1;
-	PARENT = 9;
+	PARENT = 8;
 }
 
 DISPLAY_LINE
@@ -409,9 +379,9 @@ DISPLAY_LINE
 	CHANNEL = "state_debug[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 11;
+	TREE_INDEX = 10;
 	TREE_LEVEL = 1;
-	PARENT = 9;
+	PARENT = 8;
 }
 
 DISPLAY_LINE
@@ -419,9 +389,9 @@ DISPLAY_LINE
 	CHANNEL = "state_debug[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 12;
+	TREE_INDEX = 11;
 	TREE_LEVEL = 1;
-	PARENT = 9;
+	PARENT = 8;
 }
 
 TIME_BAR

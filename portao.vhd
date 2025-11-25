@@ -14,7 +14,6 @@ entity portao is
     end_open   : in  std_logic;   -- fim de curso portão totalmente aberto
     end_close  : in  std_logic;   -- fim de curso portão totalmente fechado
     obst       : in  std_logic;   -- sensor de obstáculo
-    stop       : in  std_logic;   -- parada/ emergência (força EMERGENCIA)
 
     motor_open  : out std_logic;  -- liga motor no sentido abrir
     motor_close : out std_logic;  -- liga motor no sentido fechar
@@ -26,21 +25,21 @@ end entity portao;
 architecture rtl of portao is
 
   ---------------------------------------------------------------------------
-  -- Definição de estados (tipo enumerado, mesmos nomes da HLSM)
+  -- Definição de estados
   ---------------------------------------------------------------------------
   type state_type is (
     FECHADO,
     ABRINDO,
     ABERTO,
     FECHANDO,
-    PARE,
-    EMERGENCIA
+    PARE_ABRINDO,
+    PARE_FECHANDO
   );
 
   signal state_reg, state_next : state_type;
 
   ---------------------------------------------------------------------------
-  -- Temporizador: timer_count, t_max, t_expired
+  -- Temporizador: timer_count, T_MAX, t_expired
   ---------------------------------------------------------------------------
   signal timer_count    : unsigned(15 downto 0) := (others => '0');
   signal timer_count_en : std_logic := '0';
@@ -68,7 +67,6 @@ begin
     end if;
   end process;
 
-  -- detecção de borda de subida de bot
   bot_rise <= '1' when (bot_sync_0 = '1' and bot_sync_1 = '0') else '0';
 
   ---------------------------------------------------------------------------
@@ -113,54 +111,56 @@ begin
   timer_count_en <= '1' when state_reg = ABERTO else '0';
 
   ---------------------------------------------------------------------------
-  -- 5) LÓGICA COMBINACIONAL DE PRÓXIMO ESTADO (estilo HLSM)
+  -- 5) LÓGICA COMBINACIONAL DE PRÓXIMO ESTADO
   ---------------------------------------------------------------------------
   state_next <=
-    -- prioridade: stop domina tudo
-    EMERGENCIA when stop = '1' else
 
     -- FECHADO
-    ABRINDO    when (state_reg = FECHADO and bot_rise = '1') else
+    ABRINDO        when (state_reg = FECHADO and bot_rise = '1') else
 
     -- ABRINDO
-    ABERTO     when (state_reg = ABRINDO and end_open = '1') else
-    PARE       when (state_reg = ABRINDO and end_open = '0' and bot_rise = '1') else
+    ABERTO         when (state_reg = ABRINDO and end_open = '1') else
+    PARE_ABRINDO   when (state_reg = ABRINDO and end_open = '0' and bot_rise = '1') else
+    ABRINDO        when (state_reg = ABRINDO and end_open = '0' and bot_rise = '0') else
 
-    -- ABERTO  (fecha se apertar bot OU se t_expired = 1)
-    FECHANDO   when (state_reg = ABERTO and
-                     (bot_rise = '1' or t_expired = '1')) else
+    -- ABERTO (fecha com botão ou timeout)
+    FECHANDO       when (state_reg = ABERTO and
+                         (bot_rise = '1' or t_expired = '1')) else
+    ABERTO         when (state_reg = ABERTO and
+                         bot_rise = '0' and t_expired = '0') else
 
     -- FECHANDO
-    FECHADO    when (state_reg = FECHANDO and end_close = '1') else
-    ABRINDO    when (state_reg = FECHANDO and end_close = '0' and obst = '1') else
-    PARE       when (state_reg = FECHANDO and end_close = '0' and obst = '0' and bot_rise = '1') else
+    FECHADO        when (state_reg = FECHANDO and end_close = '1') else
+    ABRINDO        when (state_reg = FECHANDO and end_close = '0' and obst = '1') else
+    PARE_FECHANDO  when (state_reg = FECHANDO and end_close = '0' and obst = '0' and bot_rise = '1') else
+    FECHANDO       when (state_reg = FECHANDO and end_close = '0' and obst = '0' and bot_rise = '0') else
 
-    -- PARE (volta fechando quando apertar bot)
-    FECHANDO   when (state_reg = PARE and bot_rise = '1') else
+    -- PARE_ABRINDO: retoma abrindo
+    ABRINDO        when (state_reg = PARE_ABRINDO and bot_rise = '1') else
+    PARE_ABRINDO   when (state_reg = PARE_ABRINDO and bot_rise = '0') else
 
-    -- EMERGENCIA: permanece até reset
-    EMERGENCIA when (state_reg = EMERGENCIA) else
+    -- PARE_FECHANDO: retoma fechando
+    FECHANDO       when (state_reg = PARE_FECHANDO and bot_rise = '1') else
+    PARE_FECHANDO  when (state_reg = PARE_FECHANDO and bot_rise = '0') else
 
-    -- default: mantém estado
+    -- default
     state_reg;
 
   ---------------------------------------------------------------------------
   -- 6) LÓGICA DE SAÍDA (Moore)
   ---------------------------------------------------------------------------
 
-  -- motor: sentido de abrir / fechar
-  motor_open  <= '1' when state_reg = ABRINDO  else '0';
-  motor_close <= '1' when state_reg = FECHANDO else '0';
+  motor_open  <= '1' when state_reg = ABRINDO       else '0';
+  motor_close <= '1' when state_reg = FECHANDO      else '0';
 
-  -- state_debug: codificação dos estados (pra LEDs)
   with state_reg select
     state_debug <=
       "000" when FECHADO,
       "001" when ABRINDO,
       "010" when ABERTO,
       "011" when FECHANDO,
-      "100" when PARE,
-      "101" when EMERGENCIA,
-      "000" when others;
+      "100" when PARE_ABRINDO,
+      "101" when PARE_FECHANDO,
+      "111" when others;  -- só pra debug se algo der errado
 
 end architecture rtl;

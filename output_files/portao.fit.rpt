@@ -1,5 +1,5 @@
 Fitter report for portao
-Mon Nov 24 20:30:20 2025
+Mon Nov 24 22:13:02 2025
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -63,18 +63,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Mon Nov 24 20:30:20 2025           ;
+; Fitter Status                      ; Successful - Mon Nov 24 22:13:02 2025           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; portao                                          ;
 ; Top-level Entity Name              ; portao                                          ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 48 / 33,216 ( < 1 % )                           ;
-;     Total combinational functions  ; 46 / 33,216 ( < 1 % )                           ;
+; Total logic elements               ; 47 / 33,216 ( < 1 % )                           ;
+;     Total combinational functions  ; 43 / 33,216 ( < 1 % )                           ;
 ;     Dedicated logic registers      ; 24 / 33,216 ( < 1 % )                           ;
 ; Total registers                    ; 24                                              ;
-; Total pins                         ; 12 / 475 ( 3 % )                                ;
+; Total pins                         ; 11 / 475 ( 2 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 483,840 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                  ;
@@ -168,8 +168,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 87 ( 0.00 % )      ;
-;     -- Achieved     ; 0 / 87 ( 0.00 % )      ;
+;     -- Requested    ; 0 / 83 ( 0.00 % )      ;
+;     -- Achieved     ; 0 / 83 ( 0.00 % )      ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -192,7 +192,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 84      ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 80      ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -208,19 +208,19 @@ The pin-out file can be found in C:/altera/13.0sp1/portao/portao/output_files/po
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Total logic elements                        ; 48 / 33,216 ( < 1 % ) ;
-;     -- Combinational with no register       ; 24                    ;
-;     -- Register only                        ; 2                     ;
-;     -- Combinational with a register        ; 22                    ;
+; Total logic elements                        ; 47 / 33,216 ( < 1 % ) ;
+;     -- Combinational with no register       ; 23                    ;
+;     -- Register only                        ; 4                     ;
+;     -- Combinational with a register        ; 20                    ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 17                    ;
-;     -- 3 input functions                    ; 7                     ;
+;     -- 4 input functions                    ; 18                    ;
+;     -- 3 input functions                    ; 3                     ;
 ;     -- <=2 input functions                  ; 22                    ;
-;     -- Register only                        ; 2                     ;
+;     -- Register only                        ; 4                     ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 31                    ;
+;     -- normal mode                          ; 28                    ;
 ;     -- arithmetic mode                      ; 15                    ;
 ;                                             ;                       ;
 ; Total registers*                            ; 24 / 34,593 ( < 1 % ) ;
@@ -229,7 +229,7 @@ The pin-out file can be found in C:/altera/13.0sp1/portao/portao/output_files/po
 ;                                             ;                       ;
 ; Total LABs:  partially or completely used   ; 3 / 2,076 ( < 1 % )   ;
 ; Virtual pins                                ; 0                     ;
-; I/O pins                                    ; 12 / 475 ( 3 % )      ;
+; I/O pins                                    ; 11 / 475 ( 2 % )      ;
 ;     -- Clock pins                           ; 2 / 8 ( 25 % )        ;
 ;                                             ;                       ;
 ; Global signals                              ; 1                     ;
@@ -246,8 +246,8 @@ The pin-out file can be found in C:/altera/13.0sp1/portao/portao/output_files/po
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%          ;
 ; Maximum fan-out                             ; 24                    ;
 ; Highest non-global fan-out                  ; 24                    ;
-; Total fan-out                               ; 242                   ;
-; Average fan-out                             ; 2.81                  ;
+; Total fan-out                               ; 234                   ;
+; Average fan-out                             ; 2.85                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -260,19 +260,19 @@ The pin-out file can be found in C:/altera/13.0sp1/portao/portao/output_files/po
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 48 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
-;     -- Combinational with no register       ; 24                   ; 0                              ;
-;     -- Register only                        ; 2                    ; 0                              ;
-;     -- Combinational with a register        ; 22                   ; 0                              ;
+; Total logic elements                        ; 47 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
+;     -- Combinational with no register       ; 23                   ; 0                              ;
+;     -- Register only                        ; 4                    ; 0                              ;
+;     -- Combinational with a register        ; 20                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 17                   ; 0                              ;
-;     -- 3 input functions                    ; 7                    ; 0                              ;
+;     -- 4 input functions                    ; 18                   ; 0                              ;
+;     -- 3 input functions                    ; 3                    ; 0                              ;
 ;     -- <=2 input functions                  ; 22                   ; 0                              ;
-;     -- Register only                        ; 2                    ; 0                              ;
+;     -- Register only                        ; 4                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 31                   ; 0                              ;
+;     -- normal mode                          ; 28                   ; 0                              ;
 ;     -- arithmetic mode                      ; 15                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Total registers                             ; 24                   ; 0                              ;
@@ -281,7 +281,7 @@ The pin-out file can be found in C:/altera/13.0sp1/portao/portao/output_files/po
 ; Total LABs:  partially or completely used   ; 3 / 2076 ( < 1 % )   ; 0 / 2076 ( 0 % )               ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
-; I/O pins                                    ; 12                   ; 0                              ;
+; I/O pins                                    ; 11                   ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 70 ( 0 % )       ; 0 / 70 ( 0 % )                 ;
 ; Total memory bits                           ; 0                    ; 0                              ;
 ; Total RAM block bits                        ; 0                    ; 0                              ;
@@ -294,15 +294,15 @@ The pin-out file can be found in C:/altera/13.0sp1/portao/portao/output_files/po
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 242                  ; 0                              ;
-;     -- Registered Connections               ; 83                   ; 0                              ;
+;     -- Total Connections                    ; 234                  ; 0                              ;
+;     -- Registered Connections               ; 90                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 0                    ; 0                              ;
 ;     -- hard_block:auto_generated_inst       ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Partition Interface                         ;                      ;                                ;
-;     -- Input Ports                          ; 7                    ; 0                              ;
+;     -- Input Ports                          ; 6                    ; 0                              ;
 ;     -- Output Ports                         ; 5                    ; 0                              ;
 ;     -- Bidir Ports                          ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
@@ -327,13 +327,12 @@ The pin-out file can be found in C:/altera/13.0sp1/portao/portao/output_files/po
 +-----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; Name      ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +-----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; bot       ; Y22   ; 6        ; 65           ; 4            ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; bot       ; AC21  ; 7        ; 61           ; 0            ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; clk       ; N2    ; 2        ; 0            ; 18           ; 0           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; end_close ; AE14  ; 7        ; 33           ; 0            ; 0           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; end_open  ; W21   ; 6        ; 65           ; 4            ; 2           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; obst      ; AF14  ; 7        ; 33           ; 0            ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; end_close ; AD23  ; 7        ; 61           ; 0            ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; end_open  ; AF14  ; 7        ; 33           ; 0            ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; obst      ; AE14  ; 7        ; 33           ; 0            ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; rst_n     ; G26   ; 5        ; 65           ; 27           ; 1           ; 24                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; stop      ; AA24  ; 6        ; 65           ; 4            ; 0           ; 6                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 +-----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -360,8 +359,8 @@ The pin-out file can be found in C:/altera/13.0sp1/portao/portao/output_files/po
 ; 3        ; 0 / 56 ( 0 % )  ; 3.3V          ; --           ;
 ; 4        ; 0 / 58 ( 0 % )  ; 3.3V          ; --           ;
 ; 5        ; 1 / 65 ( 2 % )  ; 3.3V          ; --           ;
-; 6        ; 4 / 59 ( 7 % )  ; 3.3V          ; --           ;
-; 7        ; 7 / 58 ( 12 % ) ; 3.3V          ; --           ;
+; 6        ; 1 / 59 ( 2 % )  ; 3.3V          ; --           ;
+; 7        ; 9 / 58 ( 16 % ) ; 3.3V          ; --           ;
 ; 8        ; 0 / 56 ( 0 % )  ; 3.3V          ; --           ;
 +----------+-----------------+---------------+--------------+
 
@@ -418,7 +417,7 @@ The pin-out file can be found in C:/altera/13.0sp1/portao/portao/output_files/po
 ; AA21     ;            ;          ; GND_PLL4                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AA22     ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AA23     ; 256        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; AA24     ; 255        ; 6        ; stop                                     ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AA24     ; 255        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AA25     ; 266        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AA26     ; 267        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AB1      ; 115        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -467,7 +466,7 @@ The pin-out file can be found in C:/altera/13.0sp1/portao/portao/output_files/po
 ; AC18     ; 216        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC19     ; 222        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC20     ; 226        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AC21     ; 237        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AC21     ; 237        ; 7        ; bot                                      ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AC22     ; 241        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC23     ; 245        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AC24     ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
@@ -495,7 +494,7 @@ The pin-out file can be found in C:/altera/13.0sp1/portao/portao/output_files/po
 ; AD20     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AD21     ; 238        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD22     ; 240        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AD23     ; 239        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AD23     ; 239        ; 7        ; end_close                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AD24     ; 249        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AD25     ; 248        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AD26     ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -512,7 +511,7 @@ The pin-out file can be found in C:/altera/13.0sp1/portao/portao/output_files/po
 ; AE11     ; 174        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE12     ; 182        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE13     ; 183        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AE14     ; 188        ; 7        ; end_close                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AE14     ; 188        ; 7        ; obst                                     ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AE15     ; 189        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE16     ; 200        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE17     ; 206        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -537,7 +536,7 @@ The pin-out file can be found in C:/altera/13.0sp1/portao/portao/output_files/po
 ; AF11     ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AF12     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AF13     ; 184        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AF14     ; 187        ; 7        ; obst                                     ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF14     ; 187        ; 7        ; end_open                                 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AF15     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AF16     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AF17     ; 205        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -1011,7 +1010,7 @@ The pin-out file can be found in C:/altera/13.0sp1/portao/portao/output_files/po
 ; W18      ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; W19      ; 234        ; 7        ; state_debug[2]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; W20      ;            ;          ; GND_PLL4                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; W21      ; 253        ; 6        ; end_open                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; W21      ; 253        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W22      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; W23      ; 272        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W24      ; 271        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1038,7 +1037,7 @@ The pin-out file can be found in C:/altera/13.0sp1/portao/portao/output_files/po
 ; Y19      ;            ;          ; GNDA_PLL4                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; Y20      ;            ;          ; VCCD_PLL4                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; Y21      ; 250        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; Y22      ; 254        ; 6        ; bot                                      ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; Y22      ; 254        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y23      ; 265        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y24      ; 264        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y25      ; 269        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1089,7 +1088,7 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; |portao                    ; 48 (48)     ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 12   ; 0            ; 24 (24)      ; 2 (2)             ; 22 (22)          ; |portao             ; work         ;
+; |portao                    ; 47 (47)     ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 11   ; 0            ; 23 (23)      ; 4 (4)             ; 20 (20)          ; |portao             ; work         ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1104,63 +1103,55 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; state_debug[0] ; Output   ; --            ; --            ; --                    ; --  ;
 ; state_debug[1] ; Output   ; --            ; --            ; --                    ; --  ;
 ; state_debug[2] ; Output   ; --            ; --            ; --                    ; --  ;
+; end_open       ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; obst           ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; end_close      ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
-; stop           ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; end_open       ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; end_close      ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
 ; clk            ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; rst_n          ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; bot            ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; bot            ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
 +----------------+----------+---------------+---------------+-----------------------+-----+
 
 
-+------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                             ;
-+------------------------------+-------------------+---------+
-; Source Pin / Fanout          ; Pad To Core Index ; Setting ;
-+------------------------------+-------------------+---------+
-; obst                         ;                   ;         ;
-; end_close                    ;                   ;         ;
-; stop                         ;                   ;         ;
-;      - state_next.ABRINDO~1  ; 0                 ; 6       ;
-;      - state_next.FECHADO~0  ; 0                 ; 6       ;
-;      - state_next.FECHANDO~0 ; 0                 ; 6       ;
-;      - state_next.ABERTO~0   ; 0                 ; 6       ;
-;      - state_next.PARE~2     ; 0                 ; 6       ;
-;      - state_next.FECHADO~6  ; 0                 ; 6       ;
-; end_open                     ;                   ;         ;
-;      - state_next.FECHADO~1  ; 1                 ; 6       ;
-;      - state_next.ABERTO~0   ; 1                 ; 6       ;
-;      - state_next.PARE~0     ; 1                 ; 6       ;
-; clk                          ;                   ;         ;
-; rst_n                        ;                   ;         ;
-;      - bot_sync_1            ; 1                 ; 6       ;
-;      - bot_sync_0            ; 1                 ; 6       ;
-;      - state_reg.FECHADO     ; 1                 ; 6       ;
-;      - state_reg.ABRINDO     ; 1                 ; 6       ;
-;      - state_reg.ABERTO      ; 1                 ; 6       ;
-;      - state_reg.FECHANDO    ; 1                 ; 6       ;
-;      - state_reg.PARE        ; 1                 ; 6       ;
-;      - state_reg.EMERGENCIA  ; 1                 ; 6       ;
-;      - timer_count[0]        ; 1                 ; 6       ;
-;      - timer_count[1]        ; 1                 ; 6       ;
-;      - timer_count[2]        ; 1                 ; 6       ;
-;      - timer_count[3]        ; 1                 ; 6       ;
-;      - timer_count[4]        ; 1                 ; 6       ;
-;      - timer_count[5]        ; 1                 ; 6       ;
-;      - timer_count[6]        ; 1                 ; 6       ;
-;      - timer_count[7]        ; 1                 ; 6       ;
-;      - timer_count[8]        ; 1                 ; 6       ;
-;      - timer_count[9]        ; 1                 ; 6       ;
-;      - timer_count[10]       ; 1                 ; 6       ;
-;      - timer_count[11]       ; 1                 ; 6       ;
-;      - timer_count[12]       ; 1                 ; 6       ;
-;      - timer_count[13]       ; 1                 ; 6       ;
-;      - timer_count[14]       ; 1                 ; 6       ;
-;      - timer_count[15]       ; 1                 ; 6       ;
-; bot                          ;                   ;         ;
-;      - bot_sync_0            ; 0                 ; 6       ;
-+------------------------------+-------------------+---------+
++--------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                               ;
++--------------------------------+-------------------+---------+
+; Source Pin / Fanout            ; Pad To Core Index ; Setting ;
++--------------------------------+-------------------+---------+
+; end_open                       ;                   ;         ;
+; obst                           ;                   ;         ;
+; end_close                      ;                   ;         ;
+;      - state_next.ABRINDO~1    ; 1                 ; 6       ;
+;      - state_next.FECHANDO~2   ; 1                 ; 6       ;
+;      - state_next.FECHADO~0    ; 1                 ; 6       ;
+; clk                            ;                   ;         ;
+; rst_n                          ;                   ;         ;
+;      - bot_sync_1              ; 0                 ; 6       ;
+;      - bot_sync_0              ; 0                 ; 6       ;
+;      - state_reg.FECHADO       ; 0                 ; 6       ;
+;      - state_reg.ABRINDO       ; 0                 ; 6       ;
+;      - state_reg.ABERTO        ; 0                 ; 6       ;
+;      - state_reg.FECHANDO      ; 0                 ; 6       ;
+;      - state_reg.PARE_ABRINDO  ; 0                 ; 6       ;
+;      - state_reg.PARE_FECHANDO ; 0                 ; 6       ;
+;      - timer_count[0]          ; 0                 ; 6       ;
+;      - timer_count[1]          ; 0                 ; 6       ;
+;      - timer_count[2]          ; 0                 ; 6       ;
+;      - timer_count[3]          ; 0                 ; 6       ;
+;      - timer_count[4]          ; 0                 ; 6       ;
+;      - timer_count[5]          ; 0                 ; 6       ;
+;      - timer_count[6]          ; 0                 ; 6       ;
+;      - timer_count[7]          ; 0                 ; 6       ;
+;      - timer_count[8]          ; 0                 ; 6       ;
+;      - timer_count[9]          ; 0                 ; 6       ;
+;      - timer_count[10]         ; 0                 ; 6       ;
+;      - timer_count[11]         ; 0                 ; 6       ;
+;      - timer_count[12]         ; 0                 ; 6       ;
+;      - timer_count[13]         ; 0                 ; 6       ;
+;      - timer_count[14]         ; 0                 ; 6       ;
+;      - timer_count[15]         ; 0                 ; 6       ;
+; bot                            ;                   ;         ;
+;      - bot_sync_0              ; 0                 ; 6       ;
++--------------------------------+-------------------+---------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1170,8 +1161,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; clk                ; PIN_N2            ; 24      ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
 ; rst_n              ; PIN_G26           ; 24      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; state_reg.ABERTO   ; LCFF_X60_Y4_N25   ; 21      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; timer_count[15]~22 ; LCCOMB_X59_Y4_N14 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; state_reg.ABERTO   ; LCFF_X61_Y3_N3    ; 24      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; timer_count[15]~16 ; LCCOMB_X62_Y3_N12 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +--------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1184,103 +1175,99 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+----------+---------+----------------------+------------------+---------------------------+
 
 
-+---------------------------------+
-; Non-Global High Fan-Out Signals ;
-+-----------------------+---------+
-; Name                  ; Fan-Out ;
-+-----------------------+---------+
-; rst_n                 ; 24      ;
-; state_reg.ABERTO      ; 21      ;
-; timer_count[15]~22    ; 16      ;
-; state_reg.FECHANDO    ; 9       ;
-; stop                  ; 6       ;
-; state_next.FECHADO~0  ; 6       ;
-; bot_rise~0            ; 6       ;
-; state_reg.ABRINDO     ; 6       ;
-; state_next.FECHADO~5  ; 5       ;
-; end_close             ; 4       ;
-; state_reg.PARE        ; 4       ;
-; end_open              ; 3       ;
-; obst                  ; 3       ;
-; Equal0~4              ; 3       ;
-; state_reg.FECHADO     ; 3       ;
-; bot_sync_0            ; 3       ;
-; state_reg.EMERGENCIA  ; 3       ;
-; state_next.FECHADO~1  ; 2       ;
-; bot_sync_1            ; 2       ;
-; timer_count[15]       ; 2       ;
-; timer_count[14]       ; 2       ;
-; timer_count[13]       ; 2       ;
-; timer_count[12]       ; 2       ;
-; timer_count[11]       ; 2       ;
-; timer_count[10]       ; 2       ;
-; timer_count[9]        ; 2       ;
-; timer_count[8]        ; 2       ;
-; timer_count[7]        ; 2       ;
-; timer_count[6]        ; 2       ;
-; timer_count[5]        ; 2       ;
-; timer_count[4]        ; 2       ;
-; timer_count[3]        ; 2       ;
-; timer_count[1]        ; 2       ;
-; timer_count[0]        ; 2       ;
-; timer_count[2]        ; 2       ;
-; bot                   ; 1       ;
-; state_next.FECHADO~7  ; 1       ;
-; state_next.FECHADO~6  ; 1       ;
-; state_next.PARE~3     ; 1       ;
-; state_next.PARE~2     ; 1       ;
-; state_next.PARE~1     ; 1       ;
-; state_next.PARE~0     ; 1       ;
-; state_next.ABERTO~1   ; 1       ;
-; state_next.ABERTO~0   ; 1       ;
-; state_next.FECHANDO~2 ; 1       ;
-; state_next.FECHANDO~1 ; 1       ;
-; state_next.FECHANDO~0 ; 1       ;
-; state_next.ABRINDO~2  ; 1       ;
-; Equal0~3              ; 1       ;
-; Equal0~2              ; 1       ;
-; Equal0~1              ; 1       ;
-; Equal0~0              ; 1       ;
-; state_next.FECHADO~4  ; 1       ;
-; state_next.FECHADO~3  ; 1       ;
-; state_next.FECHADO~2  ; 1       ;
-; state_next.ABRINDO~1  ; 1       ;
-; state_next.ABRINDO~0  ; 1       ;
-; state_debug~1         ; 1       ;
-; state_debug~0         ; 1       ;
-; WideOr0~0             ; 1       ;
-; timer_count[15]~47    ; 1       ;
-; timer_count[14]~46    ; 1       ;
-; timer_count[14]~45    ; 1       ;
-; timer_count[13]~44    ; 1       ;
-; timer_count[13]~43    ; 1       ;
-; timer_count[12]~42    ; 1       ;
-; timer_count[12]~41    ; 1       ;
-; timer_count[11]~40    ; 1       ;
-; timer_count[11]~39    ; 1       ;
-; timer_count[10]~38    ; 1       ;
-; timer_count[10]~37    ; 1       ;
-; timer_count[9]~36     ; 1       ;
-; timer_count[9]~35     ; 1       ;
-; timer_count[8]~34     ; 1       ;
-; timer_count[8]~33     ; 1       ;
-; timer_count[7]~32     ; 1       ;
-; timer_count[7]~31     ; 1       ;
-; timer_count[6]~30     ; 1       ;
-; timer_count[6]~29     ; 1       ;
-; timer_count[5]~28     ; 1       ;
-; timer_count[5]~27     ; 1       ;
-; timer_count[4]~26     ; 1       ;
-; timer_count[4]~25     ; 1       ;
-; timer_count[3]~24     ; 1       ;
-; timer_count[3]~23     ; 1       ;
-; timer_count[2]~21     ; 1       ;
-; timer_count[2]~20     ; 1       ;
-; timer_count[1]~19     ; 1       ;
-; timer_count[1]~18     ; 1       ;
-; timer_count[0]~17     ; 1       ;
-; timer_count[0]~16     ; 1       ;
-+-----------------------+---------+
++--------------------------------------+
+; Non-Global High Fan-Out Signals      ;
++----------------------------+---------+
+; Name                       ; Fan-Out ;
++----------------------------+---------+
+; rst_n                      ; 24      ;
+; state_reg.ABERTO           ; 24      ;
+; timer_count[15]~16         ; 16      ;
+; state_reg.FECHANDO         ; 8       ;
+; bot_rise                   ; 7       ;
+; state_reg.ABRINDO          ; 6       ;
+; state_reg.FECHADO          ; 5       ;
+; state_reg.PARE_ABRINDO     ; 5       ;
+; state_next.ABRINDO~3       ; 4       ;
+; bot_sync_0                 ; 4       ;
+; end_close                  ; 3       ;
+; end_open                   ; 3       ;
+; Equal0~4                   ; 3       ;
+; bot_sync_1                 ; 3       ;
+; state_reg.PARE_FECHANDO    ; 3       ;
+; obst                       ; 2       ;
+; state_next.FECHANDO~5      ; 2       ;
+; state_next.FECHANDO~2      ; 2       ;
+; timer_count[15]            ; 2       ;
+; timer_count[14]            ; 2       ;
+; timer_count[13]            ; 2       ;
+; timer_count[12]            ; 2       ;
+; timer_count[11]            ; 2       ;
+; timer_count[10]            ; 2       ;
+; timer_count[9]             ; 2       ;
+; timer_count[8]             ; 2       ;
+; timer_count[7]             ; 2       ;
+; timer_count[6]             ; 2       ;
+; timer_count[5]             ; 2       ;
+; timer_count[4]             ; 2       ;
+; timer_count[3]             ; 2       ;
+; timer_count[1]             ; 2       ;
+; timer_count[0]             ; 2       ;
+; timer_count[2]             ; 2       ;
+; bot                        ; 1       ;
+; state_next.FECHANDO~6      ; 1       ;
+; state_next.PARE_FECHANDO~1 ; 1       ;
+; state_next.PARE_FECHANDO~0 ; 1       ;
+; state_next.FECHADO~0       ; 1       ;
+; state_next.PARE_ABRINDO~1  ; 1       ;
+; state_next.PARE_ABRINDO~0  ; 1       ;
+; state_next~6               ; 1       ;
+; state_next~5               ; 1       ;
+; state_next.FECHANDO~4      ; 1       ;
+; state_next.FECHANDO~3      ; 1       ;
+; Equal0~3                   ; 1       ;
+; Equal0~2                   ; 1       ;
+; Equal0~1                   ; 1       ;
+; Equal0~0                   ; 1       ;
+; state_next.ABRINDO~4       ; 1       ;
+; state_next.ABRINDO~2       ; 1       ;
+; state_next.ABRINDO~1       ; 1       ;
+; state_next.ABRINDO~0       ; 1       ;
+; WideOr0                    ; 1       ;
+; WideOr1                    ; 1       ;
+; WideOr2~0                  ; 1       ;
+; timer_count[15]~47         ; 1       ;
+; timer_count[14]~46         ; 1       ;
+; timer_count[14]~45         ; 1       ;
+; timer_count[13]~44         ; 1       ;
+; timer_count[13]~43         ; 1       ;
+; timer_count[12]~42         ; 1       ;
+; timer_count[12]~41         ; 1       ;
+; timer_count[11]~40         ; 1       ;
+; timer_count[11]~39         ; 1       ;
+; timer_count[10]~38         ; 1       ;
+; timer_count[10]~37         ; 1       ;
+; timer_count[9]~36          ; 1       ;
+; timer_count[9]~35          ; 1       ;
+; timer_count[8]~34          ; 1       ;
+; timer_count[8]~33          ; 1       ;
+; timer_count[7]~32          ; 1       ;
+; timer_count[7]~31          ; 1       ;
+; timer_count[6]~30          ; 1       ;
+; timer_count[6]~29          ; 1       ;
+; timer_count[5]~28          ; 1       ;
+; timer_count[5]~27          ; 1       ;
+; timer_count[4]~26          ; 1       ;
+; timer_count[4]~25          ; 1       ;
+; timer_count[3]~24          ; 1       ;
+; timer_count[3]~23          ; 1       ;
+; timer_count[2]~22          ; 1       ;
+; timer_count[2]~21          ; 1       ;
+; timer_count[1]~20          ; 1       ;
+; timer_count[1]~19          ; 1       ;
+; timer_count[0]~18          ; 1       ;
+; timer_count[0]~17          ; 1       ;
++----------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -1288,21 +1275,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+-----------------------+
 ; Other Routing Resource Type ; Usage                 ;
 +-----------------------------+-----------------------+
-; Block interconnects         ; 64 / 94,460 ( < 1 % ) ;
+; Block interconnects         ; 51 / 94,460 ( < 1 % ) ;
 ; C16 interconnects           ; 4 / 3,315 ( < 1 % )   ;
 ; C4 interconnects            ; 11 / 60,840 ( < 1 % ) ;
-; Direct links                ; 29 / 94,460 ( < 1 % ) ;
+; Direct links                ; 30 / 94,460 ( < 1 % ) ;
 ; Global clocks               ; 1 / 16 ( 6 % )        ;
-; Local interconnects         ; 36 / 33,216 ( < 1 % ) ;
+; Local interconnects         ; 38 / 33,216 ( < 1 % ) ;
 ; R24 interconnects           ; 3 / 3,091 ( < 1 % )   ;
-; R4 interconnects            ; 38 / 81,294 ( < 1 % ) ;
+; R4 interconnects            ; 16 / 81,294 ( < 1 % ) ;
 +-----------------------------+-----------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +---------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 16.00) ; Number of LABs  (Total = 3) ;
+; Number of Logic Elements  (Average = 15.67) ; Number of LABs  (Total = 3) ;
 +---------------------------------------------+-----------------------------+
 ; 1                                           ; 0                           ;
 ; 2                                           ; 0                           ;
@@ -1318,8 +1305,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 12                                          ; 0                           ;
 ; 13                                          ; 0                           ;
 ; 14                                          ; 0                           ;
-; 15                                          ; 0                           ;
-; 16                                          ; 3                           ;
+; 15                                          ; 1                           ;
+; 16                                          ; 2                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -1338,7 +1325,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 23.33) ; Number of LABs  (Total = 3) ;
+; Number of Signals Sourced  (Average = 22.33) ; Number of LABs  (Total = 3) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
 ; 1                                            ; 0                           ;
@@ -1361,17 +1348,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 18                                           ; 0                           ;
 ; 19                                           ; 0                           ;
 ; 20                                           ; 0                           ;
-; 21                                           ; 0                           ;
-; 22                                           ; 1                           ;
+; 21                                           ; 2                           ;
+; 22                                           ; 0                           ;
 ; 23                                           ; 0                           ;
-; 24                                           ; 2                           ;
+; 24                                           ; 0                           ;
+; 25                                           ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +--------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 13.67) ; Number of LABs  (Total = 3) ;
+; Number of Signals Sourced Out  (Average = 12.67) ; Number of LABs  (Total = 3) ;
 +--------------------------------------------------+-----------------------------+
 ; 0                                                ; 0                           ;
 ; 1                                                ; 0                           ;
@@ -1381,23 +1369,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 5                                                ; 0                           ;
 ; 6                                                ; 0                           ;
 ; 7                                                ; 0                           ;
-; 8                                                ; 1                           ;
-; 9                                                ; 0                           ;
+; 8                                                ; 0                           ;
+; 9                                                ; 1                           ;
 ; 10                                               ; 0                           ;
 ; 11                                               ; 0                           ;
 ; 12                                               ; 0                           ;
-; 13                                               ; 0                           ;
+; 13                                               ; 1                           ;
 ; 14                                               ; 0                           ;
 ; 15                                               ; 0                           ;
 ; 16                                               ; 1                           ;
-; 17                                               ; 1                           ;
 +--------------------------------------------------+-----------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 16.67) ; Number of LABs  (Total = 3) ;
+; Number of Distinct Inputs  (Average = 15.00) ; Number of LABs  (Total = 3) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
 ; 1                                            ; 0                           ;
@@ -1408,10 +1395,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 6                                            ; 0                           ;
 ; 7                                            ; 0                           ;
 ; 8                                            ; 0                           ;
-; 9                                            ; 0                           ;
+; 9                                            ; 1                           ;
 ; 10                                           ; 0                           ;
 ; 11                                           ; 1                           ;
-; 12                                           ; 1                           ;
+; 12                                           ; 0                           ;
 ; 13                                           ; 0                           ;
 ; 14                                           ; 0                           ;
 ; 15                                           ; 0                           ;
@@ -1424,9 +1411,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 22                                           ; 0                           ;
 ; 23                                           ; 0                           ;
 ; 24                                           ; 0                           ;
-; 25                                           ; 0                           ;
-; 26                                           ; 0                           ;
-; 27                                           ; 1                           ;
+; 25                                           ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
 
@@ -1475,11 +1460,10 @@ Info (169124): Fitter converted 3 user pins into dedicated programming pins
     Info (169125): Pin ~ASDO~ is reserved at location E3
     Info (169125): Pin ~nCSO~ is reserved at location D3
     Info (169125): Pin ~LVDS150p/nCEO~ is reserved at location AE24
-Critical Warning (169085): No exact pin location assignment(s) for 5 pins of 12 total pins
+Critical Warning (169085): No exact pin location assignment(s) for 4 pins of 11 total pins
+    Info (169086): Pin end_open not assigned to an exact location on the device
     Info (169086): Pin obst not assigned to an exact location on the device
     Info (169086): Pin end_close not assigned to an exact location on the device
-    Info (169086): Pin stop not assigned to an exact location on the device
-    Info (169086): Pin end_open not assigned to an exact location on the device
     Info (169086): Pin bot not assigned to an exact location on the device
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'portao.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
@@ -1490,7 +1474,7 @@ Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
 Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 5 (unused VREF, 3.3V VCCIO, 5 input, 0 output, 0 bidirectional)
+    Info (176211): Number of I/O pins in group: 4 (unused VREF, 3.3V VCCIO, 4 input, 0 output, 0 bidirectional)
         Info (176212): I/O standards used: 3.3-V LVTTL.
 Info (176215): I/O bank details before I/O pin placement
     Info (176214): Statistics of I/O banks
@@ -1514,7 +1498,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "limit_close" is assigned to location or region, but does not exist in design
     Warning (15706): Node "limit_open" is assigned to location or region, but does not exist in design
     Warning (15706): Node "sensor_obs" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -1526,7 +1510,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.16 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.13 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 5 output pins without output pin load capacitance assignment
     Info (306007): Pin "motor_open" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1537,14 +1521,14 @@ Warning (306006): Found 5 output pins without output pin load capacitance assign
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/altera/13.0sp1/portao/portao/output_files/portao.fit.smsg
 Info: Quartus II 32-bit Fitter was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 508 megabytes
-    Info: Processing ended: Mon Nov 24 20:30:20 2025
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 512 megabytes
+    Info: Processing ended: Mon Nov 24 22:13:02 2025
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 
 

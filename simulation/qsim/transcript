@@ -34,9 +34,6 @@
 # ERROR! Vector Mismatch for output port state_debug[1] :: @time = 1000000.000 ps
 #      Expected value = 000
 #      Real value = 011
-# ERROR! Vector Mismatch for output port state_debug[2] :: @time = 1260000.000 ps
-#      Expected value = 000
-#      Real value = 101
-#           3 mismatched vectors : Simulation failed !
-# ** Note: $finish    : portao.vt(252)
+#           2 mismatched vectors : Simulation failed !
+# ** Note: $finish    : portao.vt(250)
 #    Time: 2 us  Iteration: 0  Instance: /portao_vlg_vec_tst/tb_out

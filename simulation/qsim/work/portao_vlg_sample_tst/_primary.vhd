@@ -8,7 +8,6 @@ entity portao_vlg_sample_tst is
         end_open        : in     vl_logic;
         obst            : in     vl_logic;
         rst_n           : in     vl_logic;
-        stop            : in     vl_logic;
         sampler_tx      : out    vl_logic
     );
 end portao_vlg_sample_tst;

@@ -44,16 +44,10 @@ end_close => state_next.IN0
 end_close => state_next.IN0
 obst => state_next.IN1
 obst => state_next.IN1
-stop => state_next.FECHADO.OUTPUTSELECT
-stop => state_next.ABRINDO.OUTPUTSELECT
-stop => state_next.ABERTO.OUTPUTSELECT
-stop => state_next.FECHANDO.OUTPUTSELECT
-stop => state_next.PARE.OUTPUTSELECT
-stop => state_next.EMERGENCIA.OUTPUTSELECT
 motor_open <= motor_open.DB_MAX_OUTPUT_PORT_TYPE
 motor_close <= motor_close.DB_MAX_OUTPUT_PORT_TYPE
-state_debug[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-state_debug[1] <= state_debug.DB_MAX_OUTPUT_PORT_TYPE
-state_debug[2] <= state_debug.DB_MAX_OUTPUT_PORT_TYPE
+state_debug[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+state_debug[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+state_debug[2] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 

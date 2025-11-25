@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/24/2025 20:58:13"
+// Generated on "11/24/2025 22:13:37"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    portao
 // 
@@ -33,7 +33,6 @@ module portao_vlg_sample_tst(
 	end_open,
 	obst,
 	rst_n,
-	stop,
 	sampler_tx
 );
 input  bot;
@@ -42,12 +41,11 @@ input  end_close;
 input  end_open;
 input  obst;
 input  rst_n;
-input  stop;
 output sampler_tx;
 
 reg sample;
 time current_time;
-always @(bot or clk or end_close or end_open or obst or rst_n or stop)
+always @(bot or clk or end_close or end_open or obst or rst_n)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -262,7 +260,6 @@ reg end_close;
 reg end_open;
 reg obst;
 reg rst_n;
-reg stop;
 // wires                                               
 wire motor_close;
 wire motor_open;
@@ -281,8 +278,7 @@ portao i1 (
 	.motor_open(motor_open),
 	.obst(obst),
 	.rst_n(rst_n),
-	.state_debug(state_debug),
-	.stop(stop)
+	.state_debug(state_debug)
 );
 
 // bot
@@ -309,14 +305,6 @@ begin
 	clk = 1'b0;
 	clk = #10000 1'b1;
 	#10000;
-end 
-
-// stop
-initial
-begin
-	stop = 1'b0;
-	stop = #1240000 1'b1;
-	stop = #120000 1'b0;
 end 
 
 // end_close
@@ -361,7 +349,6 @@ portao_vlg_sample_tst tb_sample (
 	.end_open(end_open),
 	.obst(obst),
 	.rst_n(rst_n),
-	.stop(stop),
 	.sampler_tx(sampler)
 );
 
