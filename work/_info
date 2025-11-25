@@ -1,0 +1,80 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1\portao
+Eportao
+Z1 w1763985640
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\altera\13.0sp1\portao
+Z6 8portao.vhd
+Z7 Fportao.vhd
+l0
+L5
+V^?6[49fNY5OGHG2AHPlaX2
+Z8 OV;C;10.1d;51
+32
+Z9 !s108 1763987984.036000
+Z10 !s90 -reportprogress|300|portao.vhd|
+Z11 !s107 portao.vhd|
+o-O0
+Z12 tExplicit 1
+!s100 S7bTWNzzn77F_>^dYddVG2
+!i10b 1
+Artl
+R2
+R3
+R4
+Z13 DEx4 work 6 portao 0 22 ^?6[49fNY5OGHG2AHPlaX2
+l57
+L28
+V8ePhSi0R4A]0`]LlYXH]z0
+!s100 TnG=?X8G2]Kf[=3iSI`B`2
+R8
+32
+R9
+R10
+R11
+o-O0
+R12
+!i10b 1
+Etb_gate
+Z14 w1763987963
+R2
+R3
+R4
+R5
+Z15 8tb_gate.vhd
+Z16 Ftb_gate.vhd
+l0
+L5
+Vh7:9lTM2iP0[6ai;UAngI0
+!s100 zQ`]F<4bcQI_fcM3^VmQT0
+R8
+32
+!i10b 1
+Z17 !s108 1763987984.091000
+Z18 !s90 -reportprogress|300|tb_gate.vhd|
+Z19 !s107 tb_gate.vhd|
+o-O0
+R12
+Asim
+R13
+R2
+R3
+R4
+Z20 DEx4 work 7 tb_gate 0 22 h7:9lTM2iP0[6ai;UAngI0
+l21
+L8
+V43[OE7hfBUXI9P28ed8@12
+!s100 TPjV:?QUDWen6m[bo]]]32
+R8
+32
+!i10b 1
+R17
+R18
+R19
+o-O0
+R12

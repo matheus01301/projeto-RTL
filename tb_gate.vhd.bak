@@ -1,0 +1,72 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity tb_gate is
+end entity;
+
+architecture sim of tb_gate is
+  -- sinais que vão ligar nas portas do gate_controller
+  signal clk         : std_logic := '0';
+  signal rst_n       : std_logic := '0';
+  signal btn_cmd     : std_logic := '0';
+  signal limit_open  : std_logic := '0';
+  signal limit_close : std_logic := '0';
+  signal sensor_obs  : std_logic := '0';
+  signal emergency   : std_logic := '0';
+
+  signal motor_open  : std_logic;
+  signal motor_close : std_logic;
+  signal state_debug : std_logic_vector(2 downto 0);
+begin
+  -- DUT
+  uut: entity work.portao
+    generic map (
+      OPEN_TIME_MAX => 50_000_000  -- ajusta depois se quiser
+    )
+    port map (
+      clk         => clk,
+      rst_n       => rst_n,
+      btn_cmd     => btn_cmd,
+      limit_open  => limit_open,
+      limit_close => limit_close,
+      sensor_obs  => sensor_obs,
+      emergency   => emergency,
+      motor_open  => motor_open,
+      motor_close => motor_close,
+      state_debug => state_debug
+    );
+
+  -- clock 50 MHz (20 ns período)
+  clk_proc: process
+  begin
+    clk <= '0';
+    wait for 10 ns;
+    clk <= '1';
+    wait for 10 ns;
+  end process;
+
+  -- estímulos
+  stim_proc: process
+  begin
+    -- reset inicial
+    rst_n <= '0';
+    wait for 100 ns;
+    rst_n <= '1';
+
+    -- comando para abrir
+    wait for 50 ns;
+    btn_cmd <= '1';
+    wait for 20 ns;
+    btn_cmd <= '0';
+
+    -- simula fim de curso aberto depois de um tempo
+    wait for 1 us;
+    limit_open <= '1';
+    wait for 20 ns;
+    limit_open <= '0';
+
+    -- e assim por diante...
+    wait;
+  end process;
+end architecture;

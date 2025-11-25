@@ -1,0 +1,9 @@
+
+State Machine - |portao|state_reg
+Name state_reg.EMERGENCIA state_reg.PARE state_reg.FECHANDO state_reg.ABERTO state_reg.ABRINDO state_reg.FECHADO 
+state_reg.FECHADO 0 0 0 0 0 0 
+state_reg.ABRINDO 0 0 0 0 1 1 
+state_reg.ABERTO 0 0 0 1 0 1 
+state_reg.FECHANDO 0 0 1 0 0 1 
+state_reg.PARE 0 1 0 0 0 1 
+state_reg.EMERGENCIA 1 0 0 0 0 1 

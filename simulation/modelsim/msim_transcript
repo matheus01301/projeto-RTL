@@ -1,0 +1,104 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do portao_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/altera/13.0sp1/portao/portao.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity portao
+# -- Compiling architecture rtl of portao
+# 
+vsim work.tb_gate      ;# carrega o testbench tb_gate da library work
+# vsim work.tb_gate 
+# ** Error: (vsim-3170) Could not find 'C:/altera/13.0sp1/portao/simulation/modelsim/rtl_work.tb_gate'.
+# 
+# Error loading design
+add wave sim:/tb_gate/*        ;# sinais do testbench
+# Unrecognized dataset prefix: sim
+add wave sim:/tb_gate/uut/*    ;# sinais do DUT (instância 'uut')
+# Unrecognized dataset prefix: sim
+run 5 us
+# No Design Loaded!
+
+Compiling tb_gate.vhd
+# invalid command name "Compiling"
+cd C:/altera/13.0sp1/portao/
+# reading C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini
+vlib work
+vmap work work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+
+vcom portao.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity portao
+# -- Compiling architecture rtl of portao
+vcom tb_gate.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_gate
+# -- Compiling architecture sim of tb_gate
+# -- Loading entity portao
+
+vsim work.tb_gate
+# vsim work.tb_gate 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_gate(sim)
+# Loading work.portao(rtl)
+add wave sim:/tb_gate/*
+add wave sim:/tb_gate/uut/*
+run 5 us
+
+vcom portao.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity portao
+# -- Compiling architecture rtl of portao
+vcom tb_gate.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_gate
+# -- Compiling architecture sim of tb_gate
+# -- Loading entity portao
+
+vsim work.tb_gate
+# vsim work.tb_gate 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_gate(sim)
+# Loading work.portao(rtl)
+add wave sim:/tb_gate/*
+add wave sim:/tb_gate/uut/*
+run 20 us
+
